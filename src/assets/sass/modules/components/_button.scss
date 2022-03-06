@@ -1,0 +1,55 @@
+.button {
+  border: 0;
+  outline: none;
+  line-height: 1;
+  cursor: pointer;
+  background: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: none;
+  }
+
+  @include m(lg) {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  @include m(md) {
+    font-size: 16px;
+    padding: 7px 16px;
+    border-radius: 16px;
+    display: inline-block;
+  }
+
+  @include m(primary) {
+    color: $white;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover,
+    &:focus {
+      border-color: $kashmir-blue;
+      background-color: $kashmir-blue;
+      transition: all 0.15s ease-in;
+    }
+  }
+
+  @include m(secondary) {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover,
+    &:focus {
+      background-color: $wild-sand;
+      transition: all 0.15s ease-in;
+    }
+  }
+}
