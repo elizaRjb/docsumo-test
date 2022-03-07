@@ -17,7 +17,7 @@ function WelcomePage(props) {
       <Header />
       <div className="welcome-page__container">
         <p className="welcome-page__text">
-          Welcome to Docsumo,&nbsp;
+          Hello,&nbsp;
           <span className="text--capitalize">{fullName}</span>!
         </p>
       </div>
