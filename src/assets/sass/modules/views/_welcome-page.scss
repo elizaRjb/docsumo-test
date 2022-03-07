@@ -1,0 +1,12 @@
+.welcome-page {
+  @include e(container) {
+    margin: 0 auto;
+    padding: 40px 16px;
+    max-width: 1080px;
+  }
+
+  @include e(text) {
+    font-size: 32px;
+    color: $mine-shaft;
+  }
+}
