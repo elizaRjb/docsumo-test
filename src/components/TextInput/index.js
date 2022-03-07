@@ -40,7 +40,7 @@ function TextInput(props) {
         onBlur={handleBlur}
         disabled={disabled}
       />
-      {errorMsg && <span className="text-input__error-msg">{errorMsg}</span>}
+      <span className="text-input__error-msg">{errorMsg}</span>
     </div>
   );
 }

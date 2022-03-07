@@ -1,3 +1,11 @@
+import Icon from "../Icon";
+
+const LoadingIcon = () => (
+  <span className="button__spinner">
+    <Icon type="spinner" />
+  </span>
+);
+
 function Button(props) {
   const {
     className,
@@ -5,6 +13,7 @@ function Button(props) {
     onClick,
     variant,
     disabled,
+    loading,
     size,
     type = "button",
   } = props;
@@ -19,6 +28,10 @@ function Button(props) {
     buttonClassName += ` button--${size}`;
   }
 
+  if (loading) {
+    buttonClassName += " button--loading ";
+  }
+
   if (className) {
     buttonClassName += className;
   }
@@ -30,7 +43,8 @@ function Button(props) {
       onClick={onClick}
       disabled={disabled}
     >
-      {children}
+      {loading && <LoadingIcon />}
+      <span>{children}</span>
     </button>
   );
 }

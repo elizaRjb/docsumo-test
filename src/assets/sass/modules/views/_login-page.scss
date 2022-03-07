@@ -56,4 +56,14 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  @include e(error) {
+    width: 100%;
+    font-size: 12px;
+    min-height: 14px;
+    line-height: 1.16;
+    text-align: center;
+    margin: 14px 0 16px;
+    color: $color-error;
+  }
 }

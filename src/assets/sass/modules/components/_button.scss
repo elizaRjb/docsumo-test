@@ -8,16 +8,26 @@
   text-decoration: none;
   vertical-align: middle;
 
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
   &:hover,
   &:focus {
     outline: none;
     text-decoration: none;
   }
 
+  &:disabled {
+    cursor: not-allowed;
+  }
+
   @include m(lg) {
     width: 100%;
-    padding: 12px;
+    height: 40px;
     font-size: 14px;
+    padding: 8px 12px;
     border-radius: 20px;
     text-transform: uppercase;
   }
@@ -51,5 +61,44 @@
       background-color: $wild-sand;
       transition: all 0.15s ease-in;
     }
+  }
+
+  @include m(text) {
+    font: inherit;
+    color: $primary-color;
+    border-bottom: 1px solid transparent;
+
+    &:hover,
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  @include m(loading) {
+    border-color: $silver-chalice;
+    background-color: $silver-chalice;
+
+    &:hover,
+    &:focus {
+      border-color: $silver-chalice;
+      background-color: $silver-chalice;
+    }
+  }
+
+  @include e(spinner) {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    animation: spinner 1.4s linear infinite;
+  }
+}
+
+@include keyframes(spinner) {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
