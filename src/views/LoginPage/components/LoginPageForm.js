@@ -19,7 +19,7 @@ function LoginPageForm(props) {
           key="email"
           name="email"
           value={email}
-          label="Work email"
+          label="Work Email"
           errorMsg={formErrorMsg.email}
           onChange={handleInputChange}
         />
