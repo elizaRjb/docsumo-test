@@ -1,0 +1,19 @@
+.header {
+  padding: 16px 0;
+  border-bottom: 1px solid $silver-chalice;
+
+  @include e(container) {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 16px;
+    font-size: 14px;
+    max-width: 1080px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include e(logo) {
+    width: 214px;
+    display: inline-block;
+  }
+}
