@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import { USER_LOGOUT_REQUEST } from "../actions/auth";
+import { USER_LOGOUT_REQUEST } from "actions/auth";
 
 import auth from "./auth";
 import account from "./account";

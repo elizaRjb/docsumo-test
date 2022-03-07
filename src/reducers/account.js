@@ -1,4 +1,4 @@
-import { SET_ACCOUNT_DETAILS } from '../actions/account';
+import { SET_ACCOUNT_DETAILS } from 'actions/account';
 
 const INITIAL_STATE = null;
 

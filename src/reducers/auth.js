@@ -1,4 +1,4 @@
-import { SET_AUTH_TOKENS, SET_LOGIN_DETAILS } from '../actions/auth';
+import { SET_AUTH_TOKENS, SET_LOGIN_DETAILS } from 'actions/auth';
 
 const INITIAL_STATE = null;
 

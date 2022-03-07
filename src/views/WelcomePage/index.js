@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
 
-import { PATHS } from "../../routePaths";
+import { PATHS } from "routePaths";
 
-import Header from "../../components/Header";
+import Header from "components/Header";
 
 function WelcomePage(props) {
   const { isLoggedIn, fullName } = props;

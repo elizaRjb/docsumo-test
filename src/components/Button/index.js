@@ -1,4 +1,4 @@
-import Icon from "../Icon";
+import Icon from 'components/Icon';
 
 const LoadingIcon = () => (
   <span className="button__spinner">
@@ -7,18 +7,9 @@ const LoadingIcon = () => (
 );
 
 function Button(props) {
-  const {
-    className,
-    children,
-    onClick,
-    variant,
-    disabled,
-    loading,
-    size,
-    type = "button",
-  } = props;
+  const { className, children, onClick, variant, disabled, loading, size, type = 'button' } = props;
 
-  let buttonClassName = "button ";
+  let buttonClassName = 'button ';
 
   if (variant) {
     buttonClassName += ` button--${variant} `;
@@ -29,7 +20,7 @@ function Button(props) {
   }
 
   if (loading) {
-    buttonClassName += " button--loading ";
+    buttonClassName += ' button--loading ';
   }
 
   if (className) {
@@ -37,12 +28,7 @@ function Button(props) {
   }
 
   return (
-    <button
-      type={type}
-      className={buttonClassName}
-      onClick={onClick}
-      disabled={disabled}
-    >
+    <button type={type} className={buttonClassName} onClick={onClick} disabled={disabled}>
       {loading && <LoadingIcon />}
       <span>{children}</span>
     </button>

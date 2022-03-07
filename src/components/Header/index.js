@@ -1,12 +1,13 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { getImageUrl } from "../../utils/utils";
 
-import { PATHS } from "../../routePaths";
+import { PATHS } from "routePaths";
 
-import { userLogoutRequest } from "../../actions/auth";
+import Button from "components/Button";
 
-import Button from "../Button";
+import { getImageUrl } from "utils/utils";
+
+import { userLogoutRequest } from "actions/auth";
 
 const LOGO_ICON = getImageUrl("/images/docsumo-logo.png");
 

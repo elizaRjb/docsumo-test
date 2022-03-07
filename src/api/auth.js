@@ -1,4 +1,4 @@
-import { request } from '../services/httpService';
+import { request } from 'services/httpService';
 
 class AuthApi {
   static login(data) {

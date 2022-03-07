@@ -1,13 +1,13 @@
 import { takeLatest, call, all, put } from "redux-saga/effects";
 
-import AuthApi from "../api/auth";
+import AuthApi from "api/auth";
 
 import {
   USER_LOGIN_REQUEST,
   setAuthTokens,
   setLoginDetails,
-} from "../actions/auth";
-import { setAccountDetails } from "../actions/account";
+} from "actions/auth";
+import { setAccountDetails } from "actions/account";
 
 function* handleUserLoginRequest(action) {
   const { email, password, callbackSuccess, callbackError } = action;

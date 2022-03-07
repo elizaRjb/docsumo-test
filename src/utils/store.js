@@ -4,9 +4,9 @@ import storage from 'redux-persist/lib/storage';
 import { createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 
-import rootReducer from '../reducers';
+import rootReducer from 'reducers';
 
-import rootSaga from '../sagas/root';
+import rootSaga from 'sagas/root';
 
 const persistWhitelist = ['auth', 'account'];
 

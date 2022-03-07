@@ -1,14 +1,15 @@
 import { connect } from "react-redux";
 import React, { Component } from "react";
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
-import { PATHS } from "../../routePaths";
+import { PATHS } from "routePaths";
 
-import { validator } from "../../utils/validator";
+import Icon from "components/Icon";
 
-import { userLoginRequest } from "../../actions/auth";
+import { validator } from "utils/validator";
 
-import Icon from "../../components/Icon";
+import { userLoginRequest } from "actions/auth";
+
 import LoginPageForm from "./components/LoginPageForm";
 
 class LoginPage extends Component {
@@ -64,11 +65,13 @@ class LoginPage extends Component {
     if (hasError) return;
 
     const { email, password } = this.state;
-    const { userLoginRequest } = this.props;
+    const { userLoginRequest, history } = this.props;
 
     this.setState({ isLoading: true });
     const callbackSuccess = () => {
       this.setState({ isLoading: false });
+
+      history.push(PATHS.WELCOME);
     };
 
     const callbackError = (error) => {
